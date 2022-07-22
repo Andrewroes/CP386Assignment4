@@ -5,11 +5,10 @@
 #include <pthread.h>
 #include <ctype.h>
 
-#define MAX = 1000000 - 1;
+int MAX;
 
 int main() {
     char input[20];
-    printf(MAX);
     while(strcmp(input,"Exit")) {
         printf("Enter your option (1, 2, 3, or 'Exit'): ");
         scanf("%s", input);
