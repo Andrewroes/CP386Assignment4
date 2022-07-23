@@ -1,3 +1,8 @@
+/*
+Github login ids: Andrewroes, joeyus
+https://github.com/Andrewroes/CP386Assignment4
+*/
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
