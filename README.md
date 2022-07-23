@@ -1,6 +1,8 @@
 # CP386 Assignment 4
 4th assignment from CP386
 
+# Yeah we barely even started and its due already, we're just gonna take the L and hope there's part marks for getting github working. End of term crunch got hands
+
 # Makefile
 This file has code that compiles and runs the assignment code. It needs the file to be named "allocation.c".
 

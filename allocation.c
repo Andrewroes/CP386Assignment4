@@ -1,15 +1,19 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
-#include <ctype.h>
 
-#define MAX = 1000000 - 1;
 int alloc_mem;
-struct open_node{
+typedef struct open_node{
+    char name[20];
     int size;
     int start;
     int end;
     struct open_node *next;
 } open;
-struct memory_node{
+typedef struct memory_node{
+    char name[20];
     int size;
     int start;
     int end;
@@ -22,12 +26,26 @@ void closed_mem(open **free_memory,closed **allocated_memory,char alg, char*proc
 void open_mem(open **free_memory, closed **alloc_memory, char *procname);
 
 int main() {
+    const int MAX = 1048576 - 1; // given from make file
     char input[20];
-    printf(MAX);
-    while(strcmp(input,"Exit")) {
-        printf("Enter your option (1, 2, 3, or 'Exit'): ");
-        scanf("%s", input);
 
+    printf("Max memory: %d", MAX);
+    while(strcmp(input,"Exit")) {
+        printf("\nEnter your option, type '1' for Best Fit, type '2' for Worst Fit, type '3' for First Fit, or type 'Exit' to end program): ");
+        scanf("%s", input);
+        switch(input[0]) {
+            case '1':
+                // Go to the Best Fit code section
+                break; 
+            case '2':
+                // Go to the Worst Fit code section
+                break;
+            case '3':
+                // Go to the First Fit code section
+                break;
+            default:
+                printf("Option invalid, please try again\n");
+        }
     }
     return 0;
 }
